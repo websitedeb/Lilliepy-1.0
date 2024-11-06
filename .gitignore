@@ -1,0 +1,6 @@
+__pycache__/
+.pythonlibs/
+.upm/
+pyproject.toml
+uv.lock
+.replit
