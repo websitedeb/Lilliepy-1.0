@@ -1,11 +1,12 @@
 import flask
 from flask import request
 from flask_cors import CORS
-from public.app import App
-from public.special.pages.layout import Layout
-from public.special.pages.not_found import Not_Found
-from public.special.pages.error import Error
-from public.special.util import compare_dy_url, render
+from public.app import App, returnFavicon, returnMeta, returnTitle
+from public.special import Layout, Not_Found, Error
+from public.special.error import Error
+from lilliepy_utils import compare_dy_url, render, initialize_app_data
+
+initialize_app_data(returnFavicon, returnMeta, returnTitle)
 
 server = flask.Flask(__name__,
                      static_folder="./public/assets",

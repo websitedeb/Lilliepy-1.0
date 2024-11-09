@@ -1,7 +1,7 @@
 from reactpy import component, html
 
-from .special.hooks.router import use_dynamic_router
-from .special.hooks.static import use_favicon, use_meta, use_title
+from lilliepy_static import use_favicon, use_meta, use_title
+from lilliepy_router import use_dynamic_router
 
 title, setTitle = use_title("LilliePy Project")
 favicon, setFavicon = use_favicon("lillie.png")
